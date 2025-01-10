@@ -7,4 +7,5 @@
     <string name="foreground_service">foreground service</string>
     <string name="alarm_manager">alarm manager</string>
     <string name="job_dispatcher">job dispatcher</string>
+    <string name="job_scheduler">Job scheduler</string>
 </resources>

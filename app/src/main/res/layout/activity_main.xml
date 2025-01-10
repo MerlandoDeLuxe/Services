@@ -8,12 +8,29 @@
     android:background="#F4E4B6"
     tools:context=".MainActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBarLoading"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:max="100"
+        android:progress="0"
+        android:progressBackgroundTint="#E60F0F"
+        android:progressTint="#E60F0F"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSimpleService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="35" />
+
     <Button
         android:id="@+id/buttonIntentService"
         style="@style/ButtonStyle"
         android:layout_height="wrap_content"
         android:text="@string/intent_service"
-        app:layout_constraintBottom_toTopOf="@+id/buttonJobDispatcher"
+        app:layout_constraintBottom_toTopOf="@+id/buttonJobScheduler"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonForegroundService" />
@@ -36,7 +53,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonAlarmManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonJobDispatcher" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonJobScheduler" />
 
     <Button
         android:id="@+id/buttonSimpleService"
@@ -70,10 +87,10 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonJobInentService" />
 
     <Button
-        android:id="@+id/buttonJobDispatcher"
+        android:id="@+id/buttonJobScheduler"
         style="@style/ButtonStyle"
         android:layout_height="wrap_content"
-        android:text="@string/job_dispatcher"
+        android:text="@string/job_scheduler"
         app:layout_constraintBottom_toTopOf="@+id/buttonJobInentService"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
